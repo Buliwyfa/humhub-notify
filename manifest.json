@@ -9,13 +9,11 @@
     "32": "icons/icon32.png",
     "96": "icons/icon96.png"
   },
-  "default_locale": "en",
   "background": {
     "scripts": [
-      "src/bg/background.js"
-    ],
-    "page": "src/bg/background.html",
-    "persistent": true
+      "src/bg/background.js",
+      "src/bg/background.html"
+    ]
   },
   "browser_action": {
     "default_icon": "icons/icon96.png",

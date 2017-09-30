@@ -1,6 +1,6 @@
 {
   "name": "HumHub Notify",
-    "version": "1.2",
+    "version": "1.2.1",
     "manifest_version": 2,
     "description": "This extension is for notifying you of new notifications from HumHub.",
     "homepage_url": "https://humhub.org/",

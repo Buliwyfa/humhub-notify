@@ -6,3 +6,4 @@ A Chrome extension that will notify you of a new notification on HumHub.
 2. Go to `chrome://extensions/`
 3. Click `Load unpacked extension...`
 4. Search for `humhub-notify` (I don't plan on adding this extension to the Chrome Store.)
+5. Once the extension is loaded click `Options` and place your HumHub URL in the provided space.

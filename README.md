@@ -7,6 +7,7 @@ A Chrome extension that will notify you of a new notification on HumHub.
 3. Click `Load unpacked extension...`
 4. Search for `humhub-notify` (I don't plan on adding this extension to the Chrome Store.)
 5. Once the extension is loaded click `Options` and place your HumHub URL in the provided space.
+> Note: You must have Developer mode checked to load unpacked extensions.
 
 ### Supported Browsers
 | Browsers   | Availability | Version |

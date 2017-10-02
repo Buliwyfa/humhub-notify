@@ -1,8 +1,6 @@
 humhub
 var pingDuration = 2000;
-var privateMessageBadge = "icons/icon96.png";
-var closedTabBadge = "icons/icongray96.png";
-var groupOrChannelBadge = "icons/icon96.png";
+var notificationBadge = "icons/icon96.png";
 
 var configured = false;
 var humhub;
@@ -81,7 +79,7 @@ function parseTabName(tab) {
 
 function updateState(state) {
   if (!state) {
-    chrome.browserAction.setIcon({path: closedTabBadge});
+    chrome.browserAction.setIcon({path: notificationBadge});
     chrome.browserAction.setBadgeText({text: ""});
     return;
   }
@@ -92,18 +90,9 @@ function updateState(state) {
 
   // Set the badge icon.
   if (groupMessage)
-    badge = groupOrChannelBadge;
-  else
-    badge = privateMessageBadge;
+    badge = notificationBadge;
 
   chrome.browserAction.setIcon({path: badge});
-
-  // Notifications handler
-  chrome.notifications.getAll(
-  function(callback, request, sender, sendResponse) {
-  chrome.pageAction.show(sender.tab.id);
-  sendResponse();
-  });
 
   // Set the number of unread.
   var bubbleText = "";
@@ -114,6 +103,6 @@ function updateState(state) {
 }
 
 function setNotConfiguredState() {
-  chrome.browserAction.setIcon({path: closedTabBadge});
+  chrome.browserAction.setIcon({path: notificationBadge});
   chrome.browserAction.setBadgeText({text: "?"});
 }

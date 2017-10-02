@@ -1,9 +1,10 @@
 {
   "name": "HumHub Notify",
-    "version": "1.2.1",
+    "version": "1.2.2",
     "manifest_version": 2,
-    "description": "This extension is for notifying you of new notifications from HumHub.",
-    "homepage_url": "https://humhub.org/",
+    "description": "This extension is for notifying you of new notifications on any HumHub installation.",
+    "author": "Green Meteor",
+    "homepage_url": "https://humhub.com",
     "icons": {
     "16": "icons/icon16.png",
     "32": "icons/icon32.png",
@@ -11,8 +12,7 @@
   },
   "background": {
     "scripts": [
-      "src/bg/background.js",
-      "src/bg/background.html"
+      "src/bg/background.js"
     ]
   },
   "browser_action": {
@@ -28,6 +28,7 @@
     "storage",
     "cookies",
     "notifications",
-    "https://*/*community.humhub.com/notification/overview/*"
+    "gcm",
+    "https://*/*community.humhub.com/*"
   ]
 }

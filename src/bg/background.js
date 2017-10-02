@@ -94,6 +94,13 @@ function updateState(state) {
 
   chrome.browserAction.setIcon({path: badge});
 
+  // Notifications handler
+  chrome.notifications.getAll(
+  function(callback, request, sender, sendResponse) {
+  chrome.pageAction.show(sender.tab.id);
+  sendResponse();
+  });
+
   // Set the number of unread.
   var bubbleText = "";
   if (numberUnread > 0)

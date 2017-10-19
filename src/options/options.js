@@ -7,7 +7,7 @@ function save_options() {
     setTimeout(function() {
       status.textContent = '';
     }, 750);
-    chrome.extension.getBackgroundPage().window.location.reload()
+    chrome.extension.getBackgroundPage().window.location.reload();
   });
 }
 
@@ -19,3 +19,31 @@ function restore_options() {
 }
 document.addEventListener('DOMContentLoaded', restore_options);
 document.getElementById('save').addEventListener('click', save_options);
+// request permission on page load
+document.addEventListener('DOMContentLoaded', function () {
+  if(!notify.isSupported){
+  // display message that it will be supported
+  }
+  else{
+      notify.config({pageVisibility: false, autoClose: 5000});
+      if (Notification.permission !== "granted")
+        Notification.requestPermission();
+      }
+  }
+);
+
+function notify() {
+  if (!Notification) {
+    alert('Desktop notifications not available in your browser. Try Google Chrome.');
+    return;
+  }
+
+  if (Notification.permission !== "granted")
+    Notification.requestPermission();
+  else {
+    var notification = new Notification('New Notification', {
+      body: "Hey there! You have a new notification!",
+    });
+
+  }
+}

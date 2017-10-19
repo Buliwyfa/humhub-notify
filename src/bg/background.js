@@ -1,4 +1,4 @@
-humhub
+
 var pingDuration = 2000;
 var notificationBadge = "icons/icon96.png";
 
@@ -16,7 +16,7 @@ chrome.storage.local.get("humhub_url", function(result) {
 function goToHumHub() {
   if (!configured) {
     setNotConfiguredState();
-    chrome.runtime.openOptionsPage()
+    chrome.runtime.openOptionsPage();
     return;
   }
   chrome.tabs.getAllInWindow(null, function(tabs) {
@@ -85,8 +85,8 @@ function updateState(state) {
   }
 
   var badge;
-  var groupMessage = state["groupMessage"];
-  var numberUnread = state["numberUnread"];
+  var groupMessage = state(["groupMessage"]);
+  var numberUnread = state(["numberUnread"]);
 
   // Set the badge icon.
   if (groupMessage)

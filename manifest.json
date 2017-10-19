@@ -1,34 +1,37 @@
 {
-  "name": "HumHub Notify",
-    "version": "1.2.2",
-    "manifest_version": 2,
-    "description": "This extension is for notifying you of new notifications on any HumHub installation.",
-    "author": "Green Meteor",
-    "homepage_url": "https://humhub.com",
-    "icons": {
-    "16": "icons/icon16.png",
-    "32": "icons/icon32.png",
-    "96": "icons/icon96.png"
-  },
-  "background": {
-    "scripts": [
-      "src/bg/background.js"
-    ]
-  },
-  "browser_action": {
-    "default_icon": "icons/icon96.png",
-    "default_title": "HumHub Notify"
-  },
-  "options_ui": {
-    "page": "src/options/options.html",
-    "chrome_style": true
-  },
-  "permissions": [
-    "tabs",
-    "storage",
-    "cookies",
-    "notifications",
-    "gcm",
-    "https://*/*community.humhub.com/*"
-  ]
+	"name": "HumHub Notify",
+	"short_name": "humhub-notify",
+	"version": "1.2.2",
+	"manifest_version": 2,
+	"description": "This extension is for notifying you of new notifications on any HumHub installation.",
+	"author": "Green Meteor",
+	"homepage_url": "https://www.humhub.org/",
+	"icons": {
+		"16": "icons/icon16.png",
+		"32": "icons/icon32.png",
+		"96": "icons/icon96.png"
+	},
+	"background": {
+		"scripts": [
+			"src/bg/background.js",
+			"src/options/options.js"
+		],
+		"persistent": true
+	},
+	"browser_action": {
+		"default_icon": "icons/icon96.png",
+		"default_title": "HumHub Notify"
+	},
+	"options_ui": {
+		"page": "src/options/options.html",
+		"chrome_style": true
+	},
+	"permissions": [
+		"tabs",
+		"storage",
+		"cookies",
+		"notifications",
+		"gcm",
+		"https://*/*community.humhub.com/*"
+	]
 }

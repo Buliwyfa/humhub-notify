@@ -12,6 +12,6 @@ A Chrome extension that will notify you of a new notification on HumHub.
 ### Supported Browsers
 | Browsers   | Availability | Version |
 |----------|:-------------:|:-------------:|
-| Chrome | ![](https://img.shields.io/badge/Chrome-Available-green.svg) | 61.0.3163.100 |
+| Chrome | ![](https://img.shields.io/badge/Chrome-Available-green.svg) | 64.0.3282.140 |
 | Firefox | ![](https://img.shields.io/badge/Firefox-N%2FA-red.svg) | |
 | IE | ![](https://img.shields.io/badge/IE-N%2FA-red.svg) | |
